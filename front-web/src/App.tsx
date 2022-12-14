@@ -7,8 +7,8 @@ import PieChartCard from './components/pie-chart-card';
 import SalesTable from './components/sales-table';
 import { FilterData, PieChartConfig, SalesByPaymentMethod, SalesByStore } from './types';
 import { buildFilterParams, makeRequest } from './utils/request';
-import './App.css';
 import { buildSalesByPaymentMethod, buildSalesByStoreChart } from './helpers';
+import './App.css';
 
 function App() {
   const [filterData, setFilterData] = useState<FilterData>();
@@ -60,7 +60,7 @@ function App() {
             series={salesByPaymentMethod?.series}
           />
         </div>
-        <SalesTable />
+        <SalesTable filterData={filterData} />
       </div>
     </>
   );
